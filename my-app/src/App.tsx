@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import './App.css';
-import PatientInfo from './components/PatientInfo';
+import NewPatientForm from './components/PatientInfo';
 import { Link } from 'react-router-dom';
 // import LogIn from './components/logIn';
 // import {symptomTypes} from './components/symptomTypes';
@@ -11,9 +11,9 @@ export type Symptom = {
   symptom_id: number;
   title: string;
   description: string;
+  description_url: string;
 }
 
-// React FC: describes what type of component our app is(FC-Functional Component) (const App: React.FC = () => )
 
 function App ()  {
   const [symptoms, setSymptoms] = useState<Symptom [] | null>();
@@ -23,11 +23,12 @@ function App ()  {
       setSymptoms(response.data)            
     })
   },[]);
-    const uniqueTitles = [...new Set(symptoms?.map(symptom => symptom.title))]
+
+  const uniqueTitles = [...new Set(symptoms?.map(symptom => symptom.title))]
   return (
     <div className="App">  
       <span className="heading">WebDen Symptom Checker</span>
-      <PatientInfo/>
+      <NewPatientForm/>
       <h1 className='intro'>Welcome To Our Dental Symptom Checker!</h1>  
       <h3>What Is Bothering You?</h3> 
 

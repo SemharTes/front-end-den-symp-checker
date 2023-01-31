@@ -11,7 +11,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter><Routes><Route path='/symptom/:symptomTitle' element={<SymptomDetails/>}/><Route path='/' element={<App/>}/></Routes></BrowserRouter>
+    <BrowserRouter><Routes><Route path='/symptom/:symptomTitle' element={<SymptomDetails/>}/>
+    <Route path='/' element={<App/>}/></Routes></BrowserRouter>
 
     
   </React.StrictMode>
