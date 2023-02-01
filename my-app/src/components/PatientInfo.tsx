@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import { arrayBuffer } from 'stream/consumers';
+
 
 
 const NewPatientForm = () => {
