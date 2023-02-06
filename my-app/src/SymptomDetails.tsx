@@ -22,7 +22,7 @@ const SymptomDetails = () => {
     The link will take you to an external website!✨
     <ul>
         {symptoms?.map(symptom => (<li key={symptom.symptom_id}>
-        <a href={symptom.description_url}>{symptom.description}</a></li>))}
+        <a href={symptom.description_url}>{symptom.description} <img alt="" src="/images/external_link_icon.jpg" style={{width:"1em"}}/></a></li>))}
     </ul>
     </div>)}
 
