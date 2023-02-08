@@ -45,15 +45,15 @@ const AdminPageForm = () => {
     
   return (
    <> 
-   <h1>{symptom_id==="new" ?"add new symptom":"edit symptom"}</h1>
+   <h1>{symptom_id==="new" ?"Add new symptom or Edit an existing one!":"edit symptom"}</h1>
    <form className='labels' onSubmit={edit}>
-    <label htmlFor="">title<input value= {title}type="text" onChange={(e)=>setTitle(e.target.value)} />
+    <label htmlFor="">Title<input value= {title}type="text" onChange={(e)=>setTitle(e.target.value)} />
     {!title && showErrors && (<p>Title is required</p>)}
     </label>
-    <label htmlFor="">description<input value= {description}type="text" onChange={(e)=>setDescription(e.target.value)}/>
+    <label htmlFor="">Description<input value= {description}type="text" onChange={(e)=>setDescription(e.target.value)}/>
     {!description && showErrors && (<p>Description is required</p>)}
     </label>
-    <label htmlFor="">description_url<input value={description_url}type="text" onChange={(e)=>setDescription_url(e.target.value)}/>
+    <label htmlFor="">Description_url<input value={description_url}type="text" onChange={(e)=>setDescription_url(e.target.value)}/>
     {!description_url && showErrors && (<p>URL is required</p>)}
     </label>
     <button type="submit">Submit</button>

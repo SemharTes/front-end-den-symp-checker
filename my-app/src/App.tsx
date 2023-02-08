@@ -13,9 +13,8 @@ function App ()  {
   return (
     <div>   
       <h1 className='intro'>Welcome To Our Dental Symptom Checker!</h1>
-      <img alt="external link" src="/images/happylogotooth.jpg" style={{width:"40em", height: "30em"}}/> 
-      
       <Link to='/symptoms'>Click here to get started 🦷</Link> <br></br>
+      <img alt="external link" src="/images/happylogotooth.jpg" style={{width:"30em", height: "20em"}}/>  
       <Link to='/Login'>Admin LogIn</Link>
       {/* <LogIn/> */}
     </div>

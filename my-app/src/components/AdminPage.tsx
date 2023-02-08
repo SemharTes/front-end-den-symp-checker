@@ -19,7 +19,7 @@ useEffect(() => {
 
     const onDelete = async(symptom_id:number) => {
         await axios.delete(`http://127.0.0.1:5000/symptoms/${symptom_id}`)
-        toast.success("Wow easy!")
+        toast.success("Wow deleted, so easy!")
 
         axios.get('http://127.0.0.1:5000/symptoms').then((response) => {
         setSymptoms(response.data)            
@@ -30,11 +30,11 @@ useEffect(() => {
   return (
 <>
 
-<div>Welcome to the admin page!👩🏾‍💼🖥</div>
+<div className='adminPage'>Welcome to the admin page!👩🏾‍💼🖥</div>
 <ul className='column'>
     {symptoms.map(symptom =>(<li  
     key={symptom.symptom_id}><Link to={`/admin/${symptom.symptom_id}`} >{symptom.title} - {symptom.description}</Link>
-    <button className='deleteButton' onClick={()=>onDelete(symptom.symptom_id)}>X</button>
+    <button className='deleteButton' onClick={()=>onDelete(symptom.symptom_id)}>Delete</button>
     </li>) )}
 {/* <section className='symptomScroll'></section> */}
 </ul>

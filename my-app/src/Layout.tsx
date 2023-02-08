@@ -7,7 +7,7 @@ const Layout = () => {
       <span className="heading">WebDen Symptom Checker</span>
       <Outlet/>
 {/* I can put a footer note inside the div here */}
-      <h5>Working this project with 🤎✨</h5> 
+      <h5>Working this project with...</h5> 
     </div>
   )
 }

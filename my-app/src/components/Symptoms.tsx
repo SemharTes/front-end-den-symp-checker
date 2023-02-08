@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 import '../App.css';
-import {Gallery} from "react-grid-gallery";
+// import {Gallery} from "react-grid-gallery";
 // import path from 'path';
 // import img from '../pics/painfulteeth.png'
 
@@ -41,12 +41,15 @@ return (
         {/* <img className="your_img" src={window.location.origin + '/pics/toothgum.png'}alt=''/> */}
         
         <div> <h3>What Is Bothering You?</h3> 
-   
-         {uniqueTitles.map(title => (<div key={title}><Link to={`/symptom/${title.toLowerCase().replace(" ","-")}`}>{title}</Link></div>))}</div>
-    {/* <Gallery images={images} /> */}
+
+        {uniqueTitles.map(title => (<div key={title}>
+            <Link to={`/symptom/${title.toLowerCase().replace(" ","-")}`}>{title}</Link>
+            </div>))}
+            </div>
+    <img className="your_img" src='/pics/tooth1.png' alt=''/>
     <img className="your_img" src='/pics/painfultooth.png'alt=''/> 
-    <img className="your_image" src='/pics/toothgum.png'alt=''/>
-    {/* <img className="your_img" src={window.location.origin + '/pics/tooth1.png'}alt=''/> */}
+    <img className="your_image" src='/pics/toothgum.png'alt=''/> 
+    
     </div>
 
     )
