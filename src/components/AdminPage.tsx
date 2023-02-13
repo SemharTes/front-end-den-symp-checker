@@ -3,21 +3,22 @@ import axios from "axios";
 import { Symptom } from "./Symptoms";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../config";
 
 const AdminPage = () => {
   const [symptoms, setSymptoms] = useState<Symptom[]>([]);
   useEffect(() => {
-    const url = "http://127.0.0.1:5000/symptoms";
+    const url = `${BASE_URL}/symptoms`;
     axios.get(url).then((response) => {
       setSymptoms(response.data);
     });
   }, []);
 
   const onDelete = async (symptom_id: number) => {
-    await axios.delete(`http://127.0.0.1:5000/symptoms/${symptom_id}`);
+    await axios.delete(`${BASE_URL}/symptoms/${symptom_id}`);
     toast.success("Wow deleted, so easy!");
 
-    axios.get("http://127.0.0.1:5000/symptoms").then((response) => {
+    axios.get(`${BASE_URL}/symptoms`).then((response) => {
       setSymptoms(response.data);
     });
   };
