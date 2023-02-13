@@ -2,6 +2,7 @@ import React, { FormEvent } from "react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../config";
 
 const AdminPageForm = () => {
   const { symptom_id } = useParams();
@@ -19,13 +20,14 @@ const AdminPageForm = () => {
     }
 
     if (symptom_id !== "new") {
-      await axios.patch(`http://127.0.0.1:5000/symptoms/${symptom_id}`, {
+      const url = `${BASE_URL}/symptoms/${symptom_id}`;
+      await axios.patch(url, {
         title: title,
         description: description,
         description_url: description_url,
       });
     } else {
-      await axios.post(`http://127.0.0.1:5000/symptoms`, {
+      await axios.post(`${BASE_URL}/symptoms`, {
         title: title,
         description: description,
         description_url: description_url,
@@ -38,7 +40,7 @@ const AdminPageForm = () => {
     if (!symptom_id || symptom_id === "new") {
       return;
     }
-    const url = `http://127.0.0.1:5000/symptoms/${symptom_id}`;
+    const url = `${BASE_URL}/symptoms/${symptom_id}`;
     axios.get(url).then((response) => {
       setTitle(response.data.title);
       setDescription(response.data.description);

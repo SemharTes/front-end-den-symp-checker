@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Symptom } from "./components/Symptoms";
 import SymptomPreview from "./components/SymptomPreview";
+import { BASE_URL } from "./config";
 
 const SymptomDetails = () => {
   // getting symptomsTitle parameter from reactrouter dom that we specified on the path
   const { symptomTitle } = useParams(); // useParams hook allows you to access the parameters of the current url
   const [symptoms, setSymptoms] = useState<Symptom[]>([]);
   useEffect(() => {
-    const url = "http://127.0.0.1:5000/symptoms";
+    const url = `${BASE_URL}/symptoms`;
     axios.get(url).then((response) => {
       setSymptoms(
         response.data.filter(

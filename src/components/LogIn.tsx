@@ -2,6 +2,7 @@ import { FormEvent, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { BASE_URL } from "../config";
 
 export const LogIn = () => {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export const LogIn = () => {
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://127.0.0.1:5000/admin/login", {
+      const response = await axios.post(`${BASE_URL}/admin/login`, {
         admin_name: adminName,
         password: password,
       });

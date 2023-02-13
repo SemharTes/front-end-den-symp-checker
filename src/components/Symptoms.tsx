@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import SymptomPreview from "./SymptomPreview";
+import { BASE_URL } from "../config";
 // import { title } from "process";
 // import {Gallery} from "react-grid-gallery";
 // import path from 'path';
@@ -36,7 +37,7 @@ const Symptoms = () => {
   }
   const [symptoms, setSymptoms] = useState<Symptom[] | null>();
   useEffect(() => {
-    const url = "http://127.0.0.1:5000/symptoms";
+    const url = `${BASE_URL}/symptoms`;
     axios.get(url).then((response) => {
       setSymptoms(response.data);
     });
