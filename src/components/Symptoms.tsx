@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import SymptomPreview from "./SymptomPreview";
-import { title } from "process";
+// import { title } from "process";
 // import {Gallery} from "react-grid-gallery";
 // import path from 'path';
 // import img from '../pics/painfulteeth.png'
@@ -60,19 +60,18 @@ const Symptoms = () => {
       </h3>
       {uniqueTitles.map((titles) => {
         return (
-          <>
-            <div className="row">
-              {titles.map((title) => {
-                return (
-                  <SymptomPreview
-                    link={`/symptom/${title.toLowerCase().replace(" ", "-")}`}
-                    image={title}
-                    description={title}
-                  />
-                );
-              })}
-            </div>
-          </>
+          <div className="row" key={titles.join(",")}>
+            {titles.map((title) => {
+              return (
+                <SymptomPreview
+                  key={title}
+                  link={`/symptom/${title.toLowerCase().replace(" ", "-")}`}
+                  image={title}
+                  description={title}
+                />
+              );
+            })}
+          </div>
         );
       })}
       {/* <hr />

@@ -1,10 +1,32 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+
+import { Outlet, Link } from "react-router-dom";
+import HamburgerIcon from "./components/HamburgerIcon";
 
 const Layout = () => {
   return (
-    <div className="App">
-      <span className="heading">Dental Symptom Checker</span>
+    <div className="App ">
+      <div className="flex heading">
+        <div className=" flex-1">
+          <span>Web</span>Den Symptom Checker
+        </div>
+        <div className="menu-wrapper">
+          <HamburgerIcon />
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/symptoms">Symptoms</Link>
+            </li>
+            {/* <li>
+              <Link to="/admin">Admin</Link>
+            </li> */}
+            <Link to="/Login">AdminLogin</Link>
+            <li></li>
+          </ul>
+        </div>
+      </div>
       <Outlet />
       {/* I can put a footer note inside the div here */}
 
