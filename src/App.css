@@ -21,11 +21,11 @@
   font-family: serif;
   font-size: large;
   color: white;
-  background-color: rgb(40, 37, 37);
-  width: 500px;
-  border: 15px solid rgb(206, 191, 202);
-  padding: 50px;
-  margin: 20px;
+  background-color: rgb(40, 37, 37); 
+  /* width: 1000px;  */
+  border: 10px solid rgb(206, 191, 202);
+  /* padding: 50px;
+  margin: 20px; */
 }
 .homepage-img{
   max-width: 30vw;
@@ -50,11 +50,11 @@ span{
   position: absolute;
   top: 100%;
   right: 15px;
-  background: white; 
+  /* background: white; 
   width: 150px; 
   padding: 5px; 
   border: 1px solid #ccc; 
-  border-radius: 5px; 
+  border-radius: 5px;  */
   margin: 0;
   opacity: 0;
   transition: all 250ms ease-in-out;
@@ -107,7 +107,7 @@ h4{
   align-items: stretch;
   /* z-index: 1; */
   /* text-align: center; */
-  background-color:rgb(184, 157, 180);
+  /* background-color:rgb(184, 157, 180); */
 }
 
 /* .home_btn {
@@ -126,7 +126,7 @@ h1 {
   margin-top: 100px;
   margin-bottom: 100px;
   padding: 5rem;
-  background-color:  rgb(244, 211, 237);
+  background-color:  rgb(201, 186, 197);
 }
 
 .adminPage, .intro {

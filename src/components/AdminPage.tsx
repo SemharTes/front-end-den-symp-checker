@@ -42,7 +42,7 @@ const AdminPage = () => {
         ))}
         {/* <section className='symptomScroll'></section> */}
       </ul>
-      <Link to="/">Home</Link> <br></br>
+      {/* <Link to="/">Home</Link> <br></br> */}
       <Link to="/admin/new">Add Symptoms</Link>
       {/* <hr />
       <h5 className="footer">
