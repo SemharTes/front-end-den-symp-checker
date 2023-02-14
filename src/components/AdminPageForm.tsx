@@ -85,11 +85,11 @@ const AdminPageForm = () => {
         </label>
         <button type="submit">Submit</button>
       </form>
-      <hr />
+      {/* <hr />
       <h5 className="footer">
         &copy;{new Date().getFullYear()} MILCAH | All RightS Reserved | Terms Of
         Service | Privacy
-      </h5>
+      </h5> */}
     </>
   );
 };

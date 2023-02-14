@@ -59,10 +59,10 @@ const SymptomDetails = () => {
               })}
             </div>
             <hr />
-            <h5 className="footer">
+            {/* <h5 className="footer">
               &copy;{new Date().getFullYear()} MILCAH | All Rights Reserved |
               Terms Of Service | Privacy
-            </h5>
+            </h5> */}
           </>
         );
       })}
