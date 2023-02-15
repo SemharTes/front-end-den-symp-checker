@@ -42,8 +42,11 @@ const AdminPage = () => {
         ))}
         {/* <section className='symptomScroll'></section> */}
       </ul>
-      {/* <Link to="/">Home</Link> <br></br> */}
-      <Link to="/admin/new">Add Symptoms</Link>
+      <Link className="Addsymptom" to="/admin/new">
+        Add Symptoms
+      </Link>{" "}
+      {/* <br></br>
+      <Link to="/">Home</Link> */}
       {/* <hr />
       <h5 className="footer">
         &copy;{new Date().getFullYear()} MILCAH | All right reserved | Terms Of
