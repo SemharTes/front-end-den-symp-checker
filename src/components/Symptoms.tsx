@@ -1,13 +1,9 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../App.css";
 import SymptomPreview from "./SymptomPreview";
 import { BASE_URL } from "../config";
-// import { title } from "process";
-// import {Gallery} from "react-grid-gallery";
-// import path from 'path';
-// import img from '../pics/painfulteeth.png'
 
 //  defining the type of the expected properities
 export type Symptom = {
@@ -16,15 +12,6 @@ export type Symptom = {
   description: string;
   description_url: string;
 };
-
-// const images = [{
-//     src: window.location.origin + '/images/painfultooth.jpg',
-//     width: 320,
-//     height: 174,
-//     isSelected: true,
-//     caption: "After Rain (Jeshu John - designerspics.com)"
-
-// },];
 
 const Symptoms = () => {
   function sliceIntoChunks(arr: string[], chunkSize: number) {
@@ -75,12 +62,13 @@ const Symptoms = () => {
           </div>
         );
       })}
-      {/* <hr />
+    </div>
+
+    /* <hr />
       <h5 className="footer">
         &copy;{new Date().getFullYear()} MILCAH | All right reserved | Terms Of
         Service | Privacy
-      </h5> */}
-    </div>
+      </h5> */
     // <div className='titles_img'>
 
     //     <div> <h3>What Is Bothering You?</h3>

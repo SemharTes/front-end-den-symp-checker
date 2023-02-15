@@ -50,7 +50,7 @@ const SymptomDetails = () => {
               {titles.map((symptom) => {
                 return (
                   <SymptomPreview
-                    key={symptom.symptom_id}
+                    // key={symptom.symptom_id}
                     link={symptom.description_url}
                     image={symptom.symptom_id.toString()}
                     description={symptom.description}
