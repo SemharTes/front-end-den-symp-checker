@@ -32,7 +32,7 @@ const Symptoms = () => {
 
   const uniqueTitles = sliceIntoChunks(
     [...new Set(symptoms?.map((symptom) => symptom.title))],
-    2
+    3
   );
   // console.log(uniqueTitles);
   return (
@@ -48,40 +48,24 @@ const Symptoms = () => {
       </h3>
       {uniqueTitles.map((titles) => {
         return (
-          <div className="row" key={titles.join(",")}>
-            {titles.map((title) => {
-              return (
-                <SymptomPreview
-                  key={title}
-                  link={`/symptom/${title.toLowerCase().replace(" ", "-")}`}
-                  image={title}
-                  description={title}
-                />
-              );
-            })}
-          </div>
+          <>
+            <div className="row" key={titles.join(",")}>
+              {titles.map((title) => {
+                return (
+                  <SymptomPreview
+                    key={title}
+                    link={`/symptom/${title.toLowerCase().replace(" ", "-")}`}
+                    image={title}
+                    description={title}
+                  />
+                );
+              })}
+            </div>
+            <hr />
+          </>
         );
       })}
     </div>
-
-    /* <hr />
-      <h5 className="footer">
-        &copy;{new Date().getFullYear()} MILCAH | All right reserved | Terms Of
-        Service | Privacy
-      </h5> */
-    // <div className='titles_img'>
-
-    //     <div> <h3>What Is Bothering You?</h3>
-
-    //     {uniqueTitles.map(title => (<div key={title}>
-    //         <Link to={`/symptom/${title.toLowerCase().replace(" ","-")}`}>{title}</Link>
-    //         </div>))}
-    //         </div>
-    // <img className="your_img" src='/pics/tooth1.png' alt=''/>
-    // <img className="your_img" src='/pics/painfultooth.png'alt=''/>
-    // <img className="your_image" src='/pics/toothgum.png'alt=''/>
-
-    // </div>
   );
 };
 

@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
 import "./App.css";
-// import NewPatientForm from './components/PatientInfo';
-// import images from './src/images/tooth4'
-// import LogIn from './components/LogIn';
-// import {symptomTypes} from './components/symptomTypes';
 
 function App() {
   return (

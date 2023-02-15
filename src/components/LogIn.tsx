@@ -6,7 +6,6 @@ import { BASE_URL } from "../config";
 
 export const LogIn = () => {
   const navigate = useNavigate();
-  // const [isLoggedIn, setisLoggedIn] = useState(false)
   const [adminName, setAdminName] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,12 +26,7 @@ export const LogIn = () => {
     } catch (e) {
       toast.error("Oops Incorrect adminName or password! Try again!");
     }
-
-    // setisLoggedIn(true)
   };
-  // const handleLogout = () => {
-  //     setisLoggedIn(false)
-  // }
   return (
     <div className="login-form-container">
       <form className="login">
@@ -58,8 +52,6 @@ export const LogIn = () => {
         <button type="submit" onClick={handleLogin}>
           Log In
         </button>
-
-        {/* <div>User is {isLoggedIn ? 'logged in': 'logged out'}</div> */}
       </form>
     </div>
   );

@@ -68,28 +68,6 @@ const SymptomDetails = () => {
       })}
     </div>
   );
-
-  // <div>
-  //   Click on the condition below that most describes your concern. The link
-  //   will take you to an external website!✨
-  {
-    /* <ul>
-        {symptoms?.map((symptom) => (
-          <li key={symptom.symptom_id}>
-            <a href={symptom.description_url}>
-              {symptom.description}{" "}
-              <img
-                alt=""
-                src="/images/external_link_icon.png"
-                style={{ width: "1em" }}
-              />
-            </a>
-          </li>
-        ))}
-      </ul> */
-  }
-  //     </div>
-  //   );
 };
 
 export default SymptomDetails;
